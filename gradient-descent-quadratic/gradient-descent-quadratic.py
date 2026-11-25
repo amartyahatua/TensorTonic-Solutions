@@ -1,6 +1,3 @@
-def func(a: float, b: float, x: float) -> float:
-    fun_val = 2*a*x+b
-    return fun_val
     
 def gradient_descent_quadratic(a: float, b: float, c: float, x0: float, lr: float, steps: int) -> float:
     """
@@ -8,7 +5,7 @@ def gradient_descent_quadratic(a: float, b: float, c: float, x0: float, lr: floa
     """
     # Write code here
     for step in range(steps):
-        newx=x0-(lr*func(a, b, x0))
+        newx=x0-lr*(2*a*x0+b)
         x0=newx
 
     return newx
