@@ -3,8 +3,7 @@ def precision_recall_at_k(recommended: list, relevant: list, k: int) -> list[flo
     Returns [precision, recall] as a list of two floats.
     """
     # Write code here
-    topk = recommended[0:k]
-    intersection = list(set(topk) & set(relevant))
+    intersection = list(set(recommended[0:k]) & set(relevant))
     precision = len(intersection)/k 
     recall = len(intersection)/len(relevant)
 
